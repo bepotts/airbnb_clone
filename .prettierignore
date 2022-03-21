@@ -1,0 +1,6 @@
+# Files ignored by prettier
+
+node_modules/
+build/
+public/
+dist/

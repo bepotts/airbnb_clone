@@ -1,5 +1,2 @@
 * Add:
-    - Babel
-    - Webpack
-    - Eslint
     - prettier
