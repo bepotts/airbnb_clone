@@ -1,11 +1,14 @@
-const path = require('path');
+/**
+ * Webpack config file
+ */
 
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require("path");
+
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-    entry: './app.js',
-    // externals: [nodeExternals()],
-    devtool: 'cheap-module-source-map',
+    entry: "./index.js",
+    devtool: "cheap-module-source-map",
     mode: "development",
     module: {
         rules: [
@@ -14,24 +17,26 @@ module.exports = {
                 test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
                 use: {
-                    loader: 'babel-loader',
+                    loader: "babel-loader",
                     options: {
-                        presets: ['@babel/preset-env'],
+                        presets: ["@babel/preset-env"],
                     },
                 },
             },
-        ]
+        ],
     },
     output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: 'bundle.js',
+        path: path.resolve(__dirname, "dist"),
+        filename: "bundle.js",
     },
-    plugins: [new HtmlWebpackPlugin({
-        filename: 'index.html',
-        template: path.join(__dirname, './public', 'index.html'),
-    })],
+    plugins: [
+        new HtmlWebpackPlugin({
+            filename: "index.html",
+            template: path.join(__dirname, "./public", "index.html"),
+        }),
+    ],
     resolve: {
-        extensions: ['.js'],
+        extensions: [".js"],
     },
-    target: 'web',
+    target: "web",
 };
