@@ -4,6 +4,7 @@
     "private": true,
     "scripts": {
         "build": "webpack --config webpack.json.js",
+        "lint": "eslint source",
         "server": "webpack-dev-server --config webpack.json.js --host 0.0.0.0",
         "pretty": "npx prettier --write ."
     },
