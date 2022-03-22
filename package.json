@@ -5,7 +5,6 @@
     "scripts": {
         "build": "webpack --config webpack.json.js",
         "server": "webpack-dev-server --config webpack.json.js --host 0.0.0.0",
-        "start": "node ./bin/www",
         "pretty": "npx prettier --write ."
     },
     "husky": {
@@ -17,7 +16,6 @@
         "browserslist": "^4.20.2",
         "cookie-parser": "~1.4.4",
         "debug": "~2.6.9",
-        "express": "~4.16.1",
         "morgan": "~1.9.1",
         "react": "^17.0.2",
         "react-dom": "^17.0.2"
