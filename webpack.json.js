@@ -23,6 +23,11 @@ module.exports = {
                     },
                 },
             },
+            // CSS files
+            {
+                test: /\.(css)$/,
+                use: ["style-loader", "css-loader"],
+            },
         ],
     },
     output: {

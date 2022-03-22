@@ -5,7 +5,6 @@ import App from "./source/App";
 
 ReactDOM.render(
     <div>
-        <h1>Hello, world!</h1>
         <App />
     </div>,
 
