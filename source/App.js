@@ -3,13 +3,21 @@
  */
 
 import React, { Component } from "react";
-import ReactDOM from "react-dom";
+import { Routes, Route } from "react-router-dom";
+
+import HomePage from "./pages/HomePage";
+import UserAuthenticatePage from "./pages/UserAuthenticatePage";
 
 import "./styles/main.css";
 
 class App extends Component {
     render() {
-        return <p>Hello from inside of the main component</p>;
+        return (
+            <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/signIn" element={<UserAuthenticatePage />} />
+            </Routes>
+        );
     }
 }
 
