@@ -1,0 +1,20 @@
+[
+  {
+    "listingId": 1,
+    "title": "Swanky Beach House",
+    "location": "Venice Beach",
+    "host": "matttm",
+    "images": [
+      "https://bridgesandballoons.com/Images/2021/02/Cactus-Flower-Venice-Beach-Airbnb-4.jpg"
+    ]
+  },
+  {
+    "listing": 2,
+    "title": "Aspen Getaway",
+    "location": "Aspen",
+    "host": "matttm",
+    "images": [
+      "https://www.territorysupply.com/wp-content/uploads/2021/01/best-airbnbs-aspen-colorado-1150x768.jpg"
+    ]
+  }
+]
