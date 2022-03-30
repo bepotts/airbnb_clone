@@ -1,31 +1,43 @@
 /**
  * Page that handles User sign in and account creation
  */
-import React, { Component } from "react";
-import fs from "fs";
-import path from "path";
+import React, {Component, useEffect, useState} from "react";
 import Listing from "./Listing";
 
-class Catalog extends Component {
-    listings = [];
-    constructor(props) {
-        super(props);
-        this.listings = fs.readFileSync(path.join(__dirname, "../../resources/listings.json"));
-    }
-    render() {
-        const listings = this.listings.map((listing) => {
-            return (
-                <div key={listing.id}>
-                    <Listing props={{...listing}} />
-                </div>
-            );
-        })
+function Catalog() {
+        const [data, setData]=useState([]);
+        const getData=()=>{
+            fetch('listings.json'
+                ,{
+                    headers : {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    }
+                }
+            )
+                .then((response) => {
+                    return response.json();
+                })
+                .then((myJson) => {
+                    setData(myJson)
+                });
+        };
+        useEffect(()=>{
+            getData()
+        },[]);
         return (
             <div id="listing-container">
-                {listings}
+                {
+                    data && data.length > 0 && data.map((listing) => {
+                        return (
+                            <div key={listing.listingId}>
+                                <Listing {...listing} />
+                            </div>
+                        );
+                    })
+                }
             </div>
         );
-    }
 }
 
 export default Catalog;
