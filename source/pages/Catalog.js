@@ -7,7 +7,7 @@ import Listing from "./Listing";
 function Catalog() {
         const [data, setData]=useState([]);
         const getData=()=>{
-            fetch('listings.json'
+            fetch('state/listings.json'
                 ,{
                     headers : {
                         'Content-Type': 'application/json',
