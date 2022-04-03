@@ -18,3 +18,7 @@ p {
 a {
     font-size: 5rem;
 }
+
+body {
+    background: rgba(177, 177, 177, 0.33);
+}
