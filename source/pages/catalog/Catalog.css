@@ -1,0 +1,9 @@
+
+#listing-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 15px black;
+    border-radius: 25px;
+}

@@ -3,7 +3,7 @@
  */
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import Catalog from "./Catalog";
+import Catalog from "../catalog/Catalog";
 
 class HomePage extends Component {
     render() {
@@ -13,7 +13,7 @@ class HomePage extends Component {
                     <p>This is the homepage</p>
                     <Link to="/signIn">Sign In and Sign Up</Link>
                 </div>
-                <div>
+                <div className="content-container">
                     <Catalog />
                 </div>
             </>

@@ -1,8 +1,9 @@
 /**
  * Page that handles User sign in and account creation
  */
-import React, {Component, useEffect, useState} from "react";
-import Listing from "./Listing";
+import React, {useEffect, useState} from "react";
+import Listing from "../listing/Listing";
+import './Catalog.css';
 
 function Catalog() {
         const [data, setData]=useState([]);
@@ -30,9 +31,7 @@ function Catalog() {
                 {
                     data && data.length > 0 && data.map((listing) => {
                         return (
-                            <div key={listing.listingId}>
-                                <Listing {...listing} />
-                            </div>
+                            <Listing key={listing.listingId} {...listing} />
                         );
                     })
                 }
