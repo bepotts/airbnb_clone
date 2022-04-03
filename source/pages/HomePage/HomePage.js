@@ -3,7 +3,7 @@
  */
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import Catalog from "./catalog/Catalog";
+import Catalog from "../catalog/Catalog";
 
 class HomePage extends Component {
     render() {
