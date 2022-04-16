@@ -1,0 +1,29 @@
+.listing {
+    --listingWidth: 600px;
+    width: var(--listingWidth);
+    border: black;
+    box-shadow: black;
+    background: whitesmoke;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.listing-title {
+    font-family: "Arial Black", serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+.listing-location {
+    font-family: "Roboto Thin", serif;
+    font-size: 12px;
+    font-weight: normal;
+}
+.listing-img {
+    width: calc(var(--listingWidth) - 100px);
+    height: auto;
+}
+.listing-host {
+    font-family: "Roboto Thin", serif;
+    font-size: 16px;
+    font-weight: bold;
+}

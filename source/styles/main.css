@@ -31,3 +31,7 @@ h1 {
     font-size: 4rem;
     border-radius: 1rem;
 }
+
+body {
+    background: rgba(177, 177, 177, 0.33);
+}
