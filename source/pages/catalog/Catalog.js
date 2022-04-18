@@ -6,7 +6,7 @@ import Listing from "../listing/Listing";
 import './Catalog.css';
 
 function Catalog() {
-        const [data, setData]=useState([]);
+        const [data, setData] = useState([]);
         const getData=()=>{
             fetch('state/listings.json'
                 ,{
