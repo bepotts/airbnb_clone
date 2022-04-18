@@ -1,9 +1,7 @@
-
-import React, {Component, useState} from "react";
+import React, {useState} from "react";
 import './Listing.css';
 import {modalService} from "../../services/ModalService/ModalService";
 import ListingDetail from "../ListingDetail/ListingDetail";
-import GenericModal from "../GenericModal/GenericModal";
 
 const Listing = (props) => {
     const [show, setShow] = useState(false);
@@ -15,7 +13,6 @@ const Listing = (props) => {
                 <img className="listing-img" src={props.images[0]}  alt="Image of home"/>
                 <h4 className="listing-host">{props.host}</h4>
             </div>
-            {/*<GenericModal show={show} ><ListingDetail /></GenericModal>*/}
         </>
     );
 }
