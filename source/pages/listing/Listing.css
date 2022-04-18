@@ -16,8 +16,8 @@
 .listing-location {
     font-family: "Roboto Thin", serif;
     font-size: 12px;
-    font-weight: normal
-;}
+    font-weight: normal;
+}
 .listing-img {
     width: calc(var(--listingWidth) - 100px);
     height: auto;
