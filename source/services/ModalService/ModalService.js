@@ -16,7 +16,7 @@ const createModalServiceSingleton = () => {
         );
     };
     const closeModal = () => {
-        container.replaceChildren();
+        ReactDOM.unmountComponentAtNode(container);
     };
     return {
         openModal,
