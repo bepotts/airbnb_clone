@@ -1,25 +1,20 @@
-import React, { Component } from "react";
-import "./Listing.css";
+import React, {useState} from "react";
+import './Listing.css';
+import {modalService} from "../../services/ModalService/ModalService";
+import ListingDetail from "../ListingDetail/ListingDetail";
 
-class Listing extends Component {
-    constructor(props) {
-        console.log(props);
-        super(props);
-    }
-    render() {
-        return (
-            <div className="listing">
-                <h1 className="listing-title">{this.props.title}</h1>
-                <h3 className="listing-location">{this.props.location}</h3>
-                <img
-                    className="listing-img"
-                    src={this.props.images[0]}
-                    alt="Image of home"
-                />
-                <h4 className="listing-host">{this.props.host}</h4>
+const Listing = (props) => {
+    const [show, setShow] = useState(false);
+    return (
+        <>
+            <div className="listing" onClick={() => modalService.openModal(<ListingDetail />)}>
+                <h1 className="listing-title">{props.title}</h1>
+                <h3 className="listing-location">{props.location}</h3>
+                <img className="listing-img" src={props.images[0]}  alt="Image of home"/>
+                <h4 className="listing-host">{props.host}</h4>
             </div>
-        );
-    }
+        </>
+    );
 }
 
 export default Listing;
