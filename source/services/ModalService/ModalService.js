@@ -16,12 +16,13 @@ const createModalServiceSingleton = () => {
         );
     };
     const closeModal = () => {
+        modalRef = null;
         ReactDOM.unmountComponentAtNode(container);
     };
-    return {
+    return Object.freeze({
         openModal,
         closeModal
-    }
+    });
 }
 
 export const modalService = createModalServiceSingleton();
