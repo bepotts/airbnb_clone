@@ -2,17 +2,17 @@
  * Home page of the application
  */
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import Catalog from "../catalog/Catalog";
 import "./HomePage.css";
+import ActionBar from "../ActionBar/ActionBar";
 
 class HomePage extends Component {
     render() {
         return (
             <>
                 <div>
-                    <p>This is the homepage</p>
-                    <Link to="/signIn">Sign In and Sign Up</Link>
+                    <p>This is the homepagee</p>
+                    <ActionBar></ActionBar>
                 </div>
                 <div className="content-container">
                     <Catalog />
